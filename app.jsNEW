@@ -1,0 +1,19 @@
+$(document).ready(function () {
+
+    function clickHandler(i) {
+
+        return function () {
+
+            alert(`Accusation ${i} I accuse ${friendName}, with the ${weaponName} in the ${locationName}! `)
+        }
+
+    }
+
+    for (i = 1; i < 101; i++) {
+        $('body').append("<h3 class='acc'>Accusation</h3>")
+        $(".acc").click(clickHandler(i))
+
+    }
+
+
+});
